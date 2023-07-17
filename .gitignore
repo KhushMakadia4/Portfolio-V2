@@ -12,8 +12,22 @@
 /.next/
 /out/
 
+# VS Code
+.vscode
+
+# Firebase
+.firebase
+
+# Github
+.husky
+.github
+
+# Archived
+.archived
+
 # production
 /build
+/dist
 
 # misc
 .DS_Store
@@ -26,6 +40,7 @@ yarn-error.log*
 
 # local env files
 .env*.local
+.env
 
 # vercel
 .vercel

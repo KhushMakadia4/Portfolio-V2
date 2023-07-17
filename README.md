@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<!-- This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
@@ -31,4 +31,22 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details. -->
+
+## Khush Makadia Portfolio Repo
+
+Hey there! This is all the source code to my [portfolio website](https://khushmakadia.com). Feel free to browse around and check out how I used the technologies mentioned below to create this app!
+
+## Tech Stack
+
+This website was made with:
+
+- [NextJS](https://nextjs.org/) as a Web Framework.
+- [Shadcn/ui](https://ui.shadcn.com/) as a component library.
+- [TailwindCSS](https://tailwindcss.com/) as a CSS Framework.
+- [Firebase](https://firebase.google.com/) for database, storage, and hosting.
+- [Figma](https://www.figma.com/ui-design-tool/) for prototyping and design.
+
+## Let's get in touch!
+
+My contact information is on my portfolio website and also on my socials like my [LinkedIn](https://www.linkedin.com/in/khush-makadia/) and [GitHub Profile](https://github.com/KhushMakadia4).
