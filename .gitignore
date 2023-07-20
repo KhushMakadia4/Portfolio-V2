@@ -12,15 +12,8 @@
 /.next/
 /out/
 
-# VS Code
-.vscode
-
 # Firebase
 .firebase
-
-# Github
-.husky
-.github
 
 # Archived
 .archived
