@@ -1,38 +1,43 @@
 import Link from "next/link"
-import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar"
-import { Button } from "../ui/button"
-import { Sheet, SheetContent, SheetHeader, SheetTrigger } from "../ui/sheet"
+import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar"
+import { Button } from "./ui/button"
+import { Sheet, SheetContent, SheetHeader, SheetTrigger } from "./ui/sheet"
 
-const NavbarMobile = () => {
-  const routes: {
-    name: string
-    link: string
-  }[] = [
-    {
-      name: "Projects",
-      link: "/projects"
-    },
-    {
-      name: "Experience",
-      link: "/experience"
-    },
-    {
-      name: "Contact",
-      link: "/contact"
-    }
-  ]
+const routes: {
+  name: string
+  link: string
+}[] = [
+  {
+    name: "Projects",
+    link: "/projects"
+  },
+  {
+    name: "Experience",
+    link: "/experience"
+  },
+  {
+    name: "Contact",
+    link: "/contact"
+  }
+]
 
+const DesktopLayout = () => {
   return (
-    <div className="flex min-w-full h-16 bg-zinc-800 items-center justify-between">
-      <div className="flex px-4">
-        <Link href="/">
-          <Avatar>
-            <AvatarImage src="https://github.com/shadcn.png" />
-            <AvatarFallback>KM</AvatarFallback>
-          </Avatar>
-        </Link>
-      </div>
+    <div className="hidden md:flex justify-between space-x-8">
+      {routes.map((route, i) => {
+        return (
+          <Link href={route.link} key={`${i}-${route.name}`}>
+            <Button variant="navbar">{route.name}</Button>
+          </Link>
+        )
+      })}
+    </div>
+  )
+}
 
+const MobileLayout = () => {
+  return (
+    <div className="md:hidden">
       <Sheet key="top">
         <SheetTrigger asChild>
           <div className="flex px-4">
@@ -76,4 +81,22 @@ const NavbarMobile = () => {
   )
 }
 
-export default NavbarMobile
+const Navbar = () => {
+  return (
+    <div className="flex min-w-full h-16 bg-zinc-800 items-center justify-between md:px-8 px-4">
+      <div className="flex">
+        <Link href="/">
+          <Avatar>
+            <AvatarImage src="https://github.com/shadcn.png" />
+            <AvatarFallback>KM</AvatarFallback>
+          </Avatar>
+        </Link>
+      </div>
+
+      <DesktopLayout />
+      <MobileLayout />
+    </div>
+  )
+}
+
+export default Navbar

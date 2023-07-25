@@ -1,11 +1,8 @@
-"use client"
-
 import "./globals.css"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
-import NavbarMobile from "@/components/Navbar/Mobile"
-import { useIsDesktop } from "@/hooks/useBreakpoint"
-import NavbarDesktop from "@/components/Navbar/Desktop"
+import Navbar from "@/components/Navbar"
+import Footer from "@/components/Footer"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -22,10 +19,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="bg-zinc-300 scroll-smooth">
-      <body className={inter.className}>
-        <main className="flex min-h-screen min-w-full flex-col items-start">
-          {useIsDesktop() ? <NavbarDesktop /> : <NavbarMobile />}
-          {children}
+      <body className={inter.className} suppressHydrationWarning>
+        <main className="flex min-h-screen min-w-screen flex-col items-start">
+          <Navbar />
+          <div className="flex grow md:flex-row flex-col w-screen md:items-center items-start p-5 md:space-x-16 ">
+            {children}
+          </div>
+          <Footer />
         </main>
       </body>
     </html>
