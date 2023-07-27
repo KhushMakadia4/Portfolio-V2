@@ -5,7 +5,7 @@ import Link from "next/link"
 
 export default function Home() {
   return (
-    <>
+    <div className="flex grow md:flex-row flex-col w-screen md:items-center items-start p-5 md:space-x-16 ">
       <SocialsTray />
       <div className="md:grow inline-block h-max space-y-6 text-left text-zinc-800 pb-5">
         <Label className="md:text-7xl text-5xl font-extrabold leading-10 uppercase">
@@ -48,6 +48,6 @@ export default function Home() {
         height={1000}
         className="hidden lg:flex h-96 w-96 rounded-full"
       />
-    </>
+    </div>
   )
 }

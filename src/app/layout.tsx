@@ -22,9 +22,7 @@ export default function RootLayout({
       <body className={inter.className} suppressHydrationWarning>
         <main className="flex min-h-screen min-w-screen flex-col items-start">
           <Navbar />
-          <div className="flex grow md:flex-row flex-col w-screen md:items-center items-start p-5 md:space-x-16 ">
-            {children}
-          </div>
+          {children}
           <Footer />
         </main>
       </body>
