@@ -15,13 +15,17 @@ import { useForm } from "react-hook-form"
 import * as z from "zod"
 import { Button } from "./ui/button"
 import { Textarea } from "./ui/textarea"
+import { useToast } from "./ui/use-toast"
 
 const ContactForm = () => {
+  const { toast } = useToast()
+
   const formSchema = z.object({
     subject: z.string().min(1, "Subject is required"),
     name: z.string().min(1, "Name is required"),
     email: z.string().email("Invalid email").min(1, "Email is required"),
-    message: z.string().min(1, "Message is required")
+    message: z.string().min(1, "Message is required"),
+    lastName: z.string() // Honeypot
   })
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -30,12 +34,52 @@ const ContactForm = () => {
       subject: "",
       name: "",
       email: "",
-      message: ""
+      message: "",
+      lastName: ""
     }
   })
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values)
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    if (values.lastName !== "") {
+      window.close()
+    } else {
+      const dataObj = {
+        name: values.name,
+        email: values.email,
+        subject: values.subject,
+        message: values.message
+      }
+      await fetch("/api/contact", {
+        method: "POST",
+        body: JSON.stringify(dataObj),
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        }
+      })
+        .then((res) => {
+          if (!res.ok) {
+            toast({
+              title: "There was a server error sending the message!",
+              description: "Please email me directly or try again later!",
+              variant: "destructive"
+            })
+          } else {
+            toast({
+              title: "Message sent successfully!",
+              variant: "success"
+            })
+          }
+        })
+        .catch(() => {
+          toast({
+            title: "There was a client error sending the message!",
+            description:
+              "Please refresh your webpage or browser or email me directly!",
+            variant: "destructive"
+          })
+        })
+    }
   }
 
   return (
@@ -121,6 +165,28 @@ const ContactForm = () => {
             )
           }}
         />
+        <div className="hidden">
+          <FormField
+            control={form.control}
+            name="lastName"
+            render={({ field }) => {
+              return (
+                <FormItem className="space-y-0">
+                  <FormLabel>Last Name</FormLabel>
+                  <FormControl>
+                    <Textarea
+                      placeholder="Enter your last name here..."
+                      {...field}
+                      className="bg-zinc-200 shadow border focus:border-zinc-800"
+                    />
+                  </FormControl>
+                  <FormDescription />
+                  <FormMessage />
+                </FormItem>
+              )
+            }}
+          />
+        </div>
         <div className="pb-4">
           <Button type="submit" className="w-40 h-12">
             Send Message
