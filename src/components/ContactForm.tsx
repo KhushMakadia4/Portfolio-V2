@@ -16,9 +16,11 @@ import * as z from "zod"
 import { Button } from "./ui/button"
 import { Textarea } from "./ui/textarea"
 import { useToast } from "./ui/use-toast"
+import { useState } from "react"
 
 const ContactForm = () => {
   const { toast } = useToast()
+  const [loading, setLoading] = useState<boolean>(false)
 
   const formSchema = z.object({
     subject: z.string().min(1, "Subject is required"),
@@ -43,6 +45,7 @@ const ContactForm = () => {
     if (values.lastName !== "") {
       window.close()
     } else {
+      setLoading(true)
       const dataObj = {
         name: values.name,
         email: values.email,
@@ -70,6 +73,7 @@ const ContactForm = () => {
               variant: "success"
             })
           }
+          setLoading(false)
         })
         .catch(() => {
           toast({
@@ -78,6 +82,7 @@ const ContactForm = () => {
               "Please refresh your webpage or browser or email me directly!",
             variant: "destructive"
           })
+          setLoading(false)
         })
     }
   }
@@ -189,7 +194,39 @@ const ContactForm = () => {
         </div>
         <div className="pb-4">
           <Button type="submit" className="w-40 h-12">
-            Send Message
+            {loading ? (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                // xmlns:xlink="http://www.w3.org/1999/xlink"
+                className="m-auto bg-none block"
+                // style="margin: auto; background: none; display: block; shape-rendering: auto;"
+                width="48"
+                height="32"
+                viewBox="0 0 100 100"
+                preserveAspectRatio="xMidYMid"
+              >
+                <circle
+                  cx="50"
+                  cy="50"
+                  fill="none"
+                  stroke="#F4F4E5"
+                  stroke-width="8"
+                  r="28"
+                  stroke-dasharray="136.659280431156 47.553093477052"
+                >
+                  <animateTransform
+                    attributeName="transform"
+                    type="rotate"
+                    repeatCount="indefinite"
+                    dur="1.0204081632653061s"
+                    values="0 50 50;360 50 50"
+                    keyTimes="0;1"
+                  ></animateTransform>
+                </circle>
+              </svg>
+            ) : (
+              <>Send Message</>
+            )}
           </Button>
         </div>
       </form>
