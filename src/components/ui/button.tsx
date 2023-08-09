@@ -19,7 +19,8 @@ const buttonVariants = cva(
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-zinc-100 underline-offset-4 hover:underline",
         navbar: "bg-zinc-800 text-zinc-100 hover:bg-zinc-700",
-        social: "bg-zinc-800 text-zinc-100 hover:bg-zinc-700"
+        social: "bg-zinc-800 text-zinc-100 hover:bg-zinc-700",
+        experience: "bg-zinc-800 text-zinc-100"
       },
       size: {
         default: "h-10 px-4 py-2",

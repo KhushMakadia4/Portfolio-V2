@@ -210,9 +210,9 @@ const ContactForm = () => {
                   cy="50"
                   fill="none"
                   stroke="#F4F4E5"
-                  stroke-width="8"
+                  strokeWidth="8"
                   r="28"
-                  stroke-dasharray="136.659280431156 47.553093477052"
+                  strokeDasharray="136.659280431156 47.553093477052"
                 >
                   <animateTransform
                     attributeName="transform"
