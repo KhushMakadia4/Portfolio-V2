@@ -14,3 +14,15 @@ export interface Experience {
         month: number
       }
 }
+
+export interface Project {
+  name: string
+  shortDescription: string
+  longDescription: string
+  tech: string[]
+  links: {
+    github?: string
+    deployment?: string
+    article?: string
+  }
+}

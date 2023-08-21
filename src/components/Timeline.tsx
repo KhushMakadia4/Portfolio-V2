@@ -52,7 +52,7 @@ const experience: Experience[] = [
 
 const LargeTimeline = () => {
   return (
-    <div className="hidden lg:flex flex-row space-x-10">
+    <div className="hidden md:flex flex-row space-x-10">
       <div className="flex flex-row space-x-10">
         <div className="flex flex-col">
           {experience.map((exp: Experience, i: number) => {
@@ -110,7 +110,7 @@ const LargeTimeline = () => {
 
 const SmallTimeline = () => {
   return (
-    <div className="flex lg:hidden flex-row">
+    <div className="flex md:hidden flex-row">
       <div className="flex flex-row space-x-5">
         <div className="py-16">
           <Separator

@@ -20,7 +20,7 @@ const ExperienceCard = ({
   hide
 }: ExperienceProps) => {
   return (
-    <div className={`flex flex-row items-center`}>
+    <div className={`flex flex-row items-center justify-between`}>
       <div
         className={`w-full lg:w-96 text-left flex flex-col ${
           hide
@@ -82,9 +82,9 @@ const ExperienceCard = ({
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 96.154 96.154"
           transform={`rotate(${direction === "RIGHT" ? `0` : `180`})`}
-          className={`md:w-9 md:h-9 h-3 w-3 order-${
-            direction === "LEFT" ? "1" : "first"
-          } fill-zinc-800`}
+          className={`md:w-9 md:h-9 h-3 w-3 fill-zinc-800 ${
+            direction === "LEFT" ? "order-last" : "order-first"
+          }`}
         >
           <g>
             <path
