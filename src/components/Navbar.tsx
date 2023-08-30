@@ -1,7 +1,13 @@
 import Link from "next/link"
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar"
 import { Button } from "./ui/button"
-import { Sheet, SheetContent, SheetHeader, SheetTrigger } from "./ui/sheet"
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetHeader,
+  SheetTrigger
+} from "./ui/sheet"
 
 const routes: {
   name: string
@@ -59,19 +65,23 @@ const MobileLayout = () => {
         </SheetTrigger>
         <SheetContent side="top" className="bg-zinc-800 text-zinc-200 p-0">
           <SheetHeader className="flex px-4 pt-2">
-            <Link href="/">
-              <Avatar>
-                <AvatarImage src="https://github.com/shadcn.png" />
-                <AvatarFallback>KM</AvatarFallback>
-              </Avatar>
-            </Link>
+            <SheetClose asChild>
+              <Link href="/">
+                <Avatar>
+                  <AvatarImage src="https://github.com/shadcn.png" />
+                  <AvatarFallback>KM</AvatarFallback>
+                </Avatar>
+              </Link>
+            </SheetClose>
           </SheetHeader>
           <div className="flex flex-col py-2">
             {routes.map((route, i) => {
               return (
-                <Link href={route.link} key={`${i}-${route.name}`}>
-                  <Button variant="link">{route.name}</Button>
-                </Link>
+                <SheetClose asChild key={`${i}-${route.name}`}>
+                  <Link href={route.link}>
+                    <Button variant="link">{route.name}</Button>
+                  </Link>
+                </SheetClose>
               )
             })}
           </div>

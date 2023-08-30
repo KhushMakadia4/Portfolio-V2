@@ -1,54 +1,7 @@
 import { Experience } from "@/utils/types"
 import ExperienceCard from "./ExperienceCard"
 import { Separator } from "@/components/ui/separator"
-
-const experience: Experience[] = [
-  {
-    company: "Hack4Impact",
-    role: "Software Developer",
-    description:
-      "As a PM i like to be peepee and then poo poo so that I can fill this textbox up as fast as possible so that it looks nice on this card and it also shows relevant information about my position.",
-    link: "https://uiuc.hack4impact.org",
-    start: { month: 6, year: 2024 },
-    end: "Present"
-  },
-  {
-    company: "Hack4Impact",
-    role: "Software Developer",
-    description:
-      "As a PM i like to be peepee and then poo poo so that I can fill this textbox up as fast as possible so that it looks nice on this card and it also shows relevant information about my position.",
-    link: "https://uiuc.hack4impact.org",
-    start: { month: 6, year: 2024 },
-    end: { month: 8, year: 2025 }
-  },
-  {
-    company: "Hack4Impact",
-    role: "Software Developer",
-    description:
-      "As a PM i like to be peepee and then poo poo so that I can fill this textbox up as fast as possible so that it looks nice on this card and it also shows relevant information about my position.",
-    link: "https://uiuc.hack4impact.org",
-    start: { month: 6, year: 2024 },
-    end: { month: 8, year: 2025 }
-  },
-  {
-    company: "Hack4Impact",
-    role: "Software Developer",
-    description:
-      "As a PM i like to be peepee and then poo poo so that I can fill this textbox up as fast as possible so that it looks nice on this card and it also shows relevant information about my position.",
-    link: "https://uiuc.hack4impact.org",
-    start: { month: 6, year: 2024 },
-    end: { month: 8, year: 2025 }
-  },
-  {
-    company: "Hack4Impact",
-    role: "Software Developer",
-    description:
-      "As a PM i like to be peepee and then poo poo so that I can fill this textbox up as fast as possible so that it looks nice on this card and it also shows relevant information about my position.",
-    link: "https://uiuc.hack4impact.org",
-    start: { month: 6, year: 2024 },
-    end: { month: 8, year: 2025 }
-  }
-]
+import experience from "@/data/experience"
 
 const LargeTimeline = () => {
   return (

@@ -17,6 +17,7 @@ export interface Experience {
 
 export interface Project {
   name: string
+  image: string
   shortDescription: string
   longDescription: string
   tech: string[]
