@@ -7,10 +7,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date()
     },
     {
-      url: "https://khushmakadia.com/contact",
-      lastModified: new Date()
-    },
-    {
       url: "https://khushmakadia.com/projects",
       lastModified: new Date()
     },

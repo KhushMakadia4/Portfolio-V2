@@ -1,7 +1,6 @@
 import SocialsTray from "@/components/SocialsTray"
 import { Label } from "@/components/ui/label"
 import Image from "next/image"
-import Link from "next/link"
 
 export default function Home() {
   return (
@@ -16,12 +15,14 @@ export default function Home() {
             Aloha! I’m Khush, an aspiring software developer with a passion of
             tackling issues and turning ideas into tangible projects. View my
             resume{" "}
-            <Link
+            <a
               href="/resume.pdf"
               className="text-sky-500 underline-offset-4 hover:underline"
+              target="_blank" // This opens the link in a new tab
+              rel="noopener noreferrer" // Recommended for security when using target="_blank"
             >
               here!
-            </Link>
+            </a>
           </Label>
           <Label className="text-lg font-normal leading-loose">
             Currently, I am a software developer at Hack4Impact where I create
