@@ -1,5 +1,3 @@
-export const dynamic = "force-dynamic"
-
 import { get, set } from "lodash"
 import { NextRequest, NextResponse } from "next/server"
 import { sendMail } from "@/utils/nodemailer"
