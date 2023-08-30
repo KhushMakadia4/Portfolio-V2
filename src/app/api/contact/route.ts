@@ -49,7 +49,7 @@ const generateEmailContent = (data: {
   }
 }
 
-export async function POST(req: NextRequest) {
+export async function GET(req: NextRequest) {
   const ip = req.headers.get("x-forwarded-for")
 
   if (ip && !rateLimiterMiddleware(ip)) {
@@ -68,8 +68,4 @@ export async function POST(req: NextRequest) {
     status = 500
   })
   return NextResponse.json({ message }, { status })
-}
-
-export async function GET() {
-  return NextResponse.json({ message: "Another API feature!!" })
 }
