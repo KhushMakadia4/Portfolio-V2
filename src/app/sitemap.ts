@@ -3,19 +3,19 @@ import { MetadataRoute } from "next"
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: "https://acme.com",
+      url: "https://khushmakadia.com",
       lastModified: new Date()
     },
     {
-      url: "https://acme.com/contact",
+      url: "https://khushmakadia.com/contact",
       lastModified: new Date()
     },
     {
-      url: "https://acme.com/projects",
+      url: "https://khushmakadia.com/projects",
       lastModified: new Date()
     },
     {
-      url: "https://acme.com/experience",
+      url: "https://khushmakadia.com/experience",
       lastModified: new Date()
     }
   ]

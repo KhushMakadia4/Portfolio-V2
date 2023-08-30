@@ -90,7 +90,7 @@ const projects: Project[] = [
     tech: ["Android Studio", "Java", "Firebase", "Jetpack"],
     links: {
       github: "https://github.com/Rishit-5/Trucycle",
-      article: "https://www.youtube.com/watch?v=DJPDs6PJGjU&t=57s"
+      article: "https://www.youtube.com/watch?v=DJPDs6PJGjU"
     }
   },
   {

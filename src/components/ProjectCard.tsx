@@ -54,7 +54,7 @@ const ProjectCard = ({
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <div className="md:w-96 h-max w-80 hover:bg-zinc-300 flex flex-col text-left bg-zinc-200 rounded-2xl shadow-xl border border-zinc-800 text-zinc-800 overflow-hidden mt-4 mr-8">
+        <div className="md:w-96 h-max w-80 hover:cursor-pointer hover:bg-zinc-300 flex flex-col text-left bg-zinc-200 rounded-2xl shadow-xl border border-zinc-800 text-zinc-800 overflow-hidden mt-4 mr-8">
           <div className="md:pb-2">
             <Image
               className="w-full select-none"

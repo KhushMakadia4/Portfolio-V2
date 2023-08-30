@@ -24,7 +24,7 @@ export default function Home() {
             </Link>
           </Label>
           <Label className="text-lg font-normal leading-loose">
-            Currently, I am a software developer at Hack4Imapct where I create
+            Currently, I am a software developer at Hack4Impact where I create
             software for nonprofits to optimize their operations. Check out our{" "}
             <a
               href="https://uiuc.hack4impact.org"
