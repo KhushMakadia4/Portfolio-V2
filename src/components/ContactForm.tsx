@@ -55,6 +55,7 @@ const ContactForm = () => {
       await fetch("/api/contact", {
         method: "POST",
         body: JSON.stringify(dataObj),
+        cache: "force-cache",
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json"

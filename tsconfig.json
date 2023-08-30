@@ -28,7 +28,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/utils/nodemailer.js"
+    "src/utils/nodemailer.ts"
   ],
   "exclude": ["node_modules"]
 }

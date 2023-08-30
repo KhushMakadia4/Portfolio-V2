@@ -1,3 +1,5 @@
+export const dynamic = "force-static"
+
 import { get, set } from "lodash"
 import { NextRequest, NextResponse } from "next/server"
 import { sendMail } from "@/utils/nodemailer"
@@ -49,7 +51,7 @@ const generateEmailContent = (data: {
   }
 }
 
-export async function GET(req: NextRequest) {
+export async function POST(req: NextRequest) {
   const ip = req.headers.get("x-forwarded-for")
 
   if (ip && !rateLimiterMiddleware(ip)) {

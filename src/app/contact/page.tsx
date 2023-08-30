@@ -1,3 +1,5 @@
+"use client"
+
 import ContactForm from "@/components/ContactForm"
 import SocialsTray from "@/components/SocialsTray"
 import { Label } from "@/components/ui/label"
