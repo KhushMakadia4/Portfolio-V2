@@ -68,7 +68,7 @@ const MobileLayout = () => {
             <SheetClose asChild>
               <Link href="/">
                 <Avatar>
-                  <AvatarImage src="https://github.com/shadcn.png" />
+                  <AvatarImage src="/KMLogo.png" />
                   <AvatarFallback>KM</AvatarFallback>
                 </Avatar>
               </Link>
@@ -97,7 +97,7 @@ const Navbar = () => {
       <div className="flex">
         <Link href="/">
           <Avatar>
-            <AvatarImage src="https://github.com/shadcn.png" />
+            <AvatarImage src="/KMLogo.png" />
             <AvatarFallback>KM</AvatarFallback>
           </Avatar>
         </Link>
