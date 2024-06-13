@@ -18,8 +18,8 @@ export default function Home() {
             <a
               href="/resume.pdf"
               className="text-sky-500 underline-offset-4 hover:underline"
-              target="_blank" // This opens the link in a new tab
-              rel="noopener noreferrer" // Recommended for security when using target="_blank"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               here!
             </a>
@@ -38,7 +38,7 @@ export default function Home() {
           <Label className="text-lg font-normal leading-loose">
             I’m also studying Computer Science at the University of Illinois at
             Urbana-Champaign. My goal is to attain a masters in Systems Design
-            for Software Development projects through this education.{" "}
+            for Software Development.
           </Label>
         </div>
       </div>

@@ -7,7 +7,7 @@ const projects: Project[] = [
     shortDescription:
       "A data visualization tool for Indian pre-school performance.",
     longDescription:
-      "Parivartan is a data visualization tool created for the Meraki Foundation nonprofit to be used by the Government of India to monitor how many resources and amenities Indian preschools have in certain regions and allocate funding properly. Parivartan replaces Meraki’s original, inefficient Google Sheets dataset solution with a Google Apps Script + Supabase solution which cleans and filters the Google Sheets datasets into usable and relevant data. The backend also incorporates tiered OTP authentication for each level of the Indian Government bureaucracy so that a district-level government official can only see data for their district and its subregions. The frontend incorporates mobile responsiveness, tier-based data and visuals, and most importantly, accessible and indicative data visuals that indicate relevant data for each school or region's resources based on numerous iterations of user testing and research.",
+      "Parivartan is a data visualization tool created for the Meraki Foundation nonprofit and is being used by the Government of India to monitor how many resources and amenities Indian preschools have in certain regions and allocate funding properly. Parivartan replaces Meraki’s original, inefficient Google Sheets dataset solution with a Google Apps Script + Supabase solution which cleans and filters the Google Sheets datasets into usable and relevant data. The backend also incorporates tiered OTP authentication for each level of the Indian Government bureaucracy so that a district-level government official can only see data for their district and its subregions. The frontend incorporates mobile responsiveness, tier-based data and visuals, and most importantly, accessible and indicative data visuals that indicate relevant data for each school or region's resources based on numerous iterations of user testing and research.",
     tech: [
       "NextJS",
       "PostgreSQL",
@@ -19,8 +19,45 @@ const projects: Project[] = [
       "Figma"
     ],
     links: {
-      deployment: "https://parivartan.vercel.app/"
+      deployment: "https://parivartan.vercel.app/",
+      article: "https://uiuc.hack4impact.org/projects/meraki"
     }
+  },
+  {
+    name: "Donor Space",
+    image: "/akamahome.png",
+    shortDescription: "Scholarshpi Endowment process simplified.",
+    longDescription:
+      "Donor Space is a tool created for Akama Fund to simplify the scholarship endowment process for university students philanthropic donors. We worked with Akama Fund to build a scalable and simple endowment facilitation web application called Donor Space. This tool greatly simplifies the scholarship creation and application processes for donors and students respectively. In essence, this platform will house many different scholarships for students to browse through and “one-click” apply so that the process is extremely quick on their end. On the other hand, Donor Space also contains an extremely helpful guide to creating scholarships within our platform with the Scholarship Consultant.",
+    tech: [
+      "NextJS",
+      "PostgreSQL",
+      "Supabase",
+      "Drizzle",
+      "Typescript",
+      "Tailwind",
+      "Figma"
+    ],
+    links: {
+      deployment: "https://donorspace.akamafund.org/"
+    }
+  },
+  {
+    name: "Job Hunt",
+    image: "/opcode.png",
+    shortDescription: "Job search platform for veterans breaking into tech.",
+    longDescription:
+      "Job Hunt is a tailored job board for Operation Code. The purpose of job board is to provide a tailored and unique experience to the veteran community of Operation Code who are veterans looking to break into the technology industry. Originally, they put specialized job opportunities in a massive slack where they would end up getting lost but Job Hunt not only allows veternas to save any jobs they want to apply to but also tracks the applicant data and displays it to recruiters and administrators on the platform.",
+    tech: [
+      "NextJS",
+      "Typescript",
+      "Prisma",
+      "Supabase",
+      "PostgreSQL",
+      "Tailwind",
+      "Figma"
+    ],
+    links: {}
   },
   {
     name: "Brink Web App",
