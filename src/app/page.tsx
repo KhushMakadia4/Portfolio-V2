@@ -25,9 +25,10 @@ export default function Home() {
             </a>
           </Label>
           <Label className="text-lg font-normal leading-loose">
-            Currently, I am a Co-Director at Hack4Impact where we create
-            full-stack software for nonprofits around the world to optimize
-            their operations and expand their mission. Check out our{" "}
+            Currently, I am a SWE Intern @ Stripe and now an Ex-Director at
+            Hack4Impact where we create full-stack software for nonprofits
+            around the world to optimize their operations and expand their
+            mission. Check out our{" "}
             <a
               href="https://uiuc.hack4impact.org"
               className="text-sky-500 underline-offset-4 hover:underline"
